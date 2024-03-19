@@ -54,7 +54,7 @@
           "buildMultiTargeting/Microsoft.NET.Test.Sdk.props": {}
         }
       },
-      "Microsoft.Playwright/1.41.0": {
+      "Microsoft.Playwright/1.42.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
@@ -73,6 +73,39 @@
         },
         "build": {
           "buildTransitive/Microsoft.Playwright.targets": {}
+        }
+      },
+      "Microsoft.Playwright.NUnit/1.42.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NET.Test.Sdk": "16.11.0",
+          "Microsoft.Playwright": "1.42.0",
+          "Microsoft.Playwright.TestAdapter": "1.42.0",
+          "NUnit": "3.13.2",
+          "NUnit3TestAdapter": "4.0.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.Playwright.NUnit.dll": {
+            "related": ".runtimeconfig.json"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Playwright.NUnit.dll": {
+            "related": ".runtimeconfig.json"
+          }
+        }
+      },
+      "Microsoft.Playwright.TestAdapter/1.42.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Playwright": "1.42.0",
+          "Microsoft.TestPlatform.ObjectModel": "17.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Playwright.TestAdapter.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Playwright.TestAdapter.dll": {}
         }
       },
       "Microsoft.TestPlatform.ObjectModel/17.6.0": {
@@ -351,7 +384,7 @@
           }
         }
       },
-      "NUnit/4.0.1": {
+      "NUnit/4.1.0": {
         "type": "package",
         "compile": {
           "lib/net6.0/nunit.framework.dll": {
@@ -635,10 +668,10 @@
         "microsoft.net.test.sdk.nuspec"
       ]
     },
-    "Microsoft.Playwright/1.41.0": {
-      "sha512": "ez0fwsYAyAUZ9V64DOVLPQijRPibod/Ue6QHq0nqwqL633iVVRrpo+yGFIarMgD3p0q9ODqDr6jAQxNv9ld8Rw==",
+    "Microsoft.Playwright/1.42.0": {
+      "sha512": "vH4dIqJFDRB8+qsoy6vWJwemXwTMDo51aYoDTNrlz+mVqbfZaeEReVdHvwbtIBwm4iADpFQf0xWRoR2pHVKbWQ==",
       "type": "package",
-      "path": "microsoft.playwright/1.41.0",
+      "path": "microsoft.playwright/1.42.0",
       "files": [
         ".nupkg.metadata",
         ".playwright/node/LICENSE",
@@ -675,9 +708,9 @@
         ".playwright/package/index.mjs",
         ".playwright/package/lib/androidServerImpl.js",
         ".playwright/package/lib/browserServerImpl.js",
-        ".playwright/package/lib/cli/cli.js",
         ".playwright/package/lib/cli/driver.js",
         ".playwright/package/lib/cli/program.js",
+        ".playwright/package/lib/cli/programWithTestStub.js",
         ".playwright/package/lib/client/accessibility.js",
         ".playwright/package/lib/client/android.js",
         ".playwright/package/lib/client/api.js",
@@ -719,7 +752,6 @@
         ".playwright/package/lib/client/webError.js",
         ".playwright/package/lib/client/worker.js",
         ".playwright/package/lib/client/writableStream.js",
-        ".playwright/package/lib/common/debugLogger.js",
         ".playwright/package/lib/common/socksProxy.js",
         ".playwright/package/lib/common/timeoutSettings.js",
         ".playwright/package/lib/common/types.js",
@@ -874,6 +906,7 @@
         ".playwright/package/lib/utils/comparators.js",
         ".playwright/package/lib/utils/crypto.js",
         ".playwright/package/lib/utils/debug.js",
+        ".playwright/package/lib/utils/debugLogger.js",
         ".playwright/package/lib/utils/env.js",
         ".playwright/package/lib/utils/eventsHelper.js",
         ".playwright/package/lib/utils/fileUtils.js",
@@ -899,6 +932,7 @@
         ".playwright/package/lib/utils/processLauncher.js",
         ".playwright/package/lib/utils/profiler.js",
         ".playwright/package/lib/utils/rtti.js",
+        ".playwright/package/lib/utils/semaphore.js",
         ".playwright/package/lib/utils/spawnAsync.js",
         ".playwright/package/lib/utils/stackTrace.js",
         ".playwright/package/lib/utils/task.js",
@@ -906,35 +940,36 @@
         ".playwright/package/lib/utils/timeoutRunner.js",
         ".playwright/package/lib/utils/traceUtils.js",
         ".playwright/package/lib/utils/userAgent.js",
+        ".playwright/package/lib/utils/wsServer.js",
         ".playwright/package/lib/utils/zipFile.js",
         ".playwright/package/lib/utils/zones.js",
         ".playwright/package/lib/utilsBundle.js",
         ".playwright/package/lib/utilsBundleImpl/index.js",
         ".playwright/package/lib/utilsBundleImpl/xdg-open",
         ".playwright/package/lib/vite/htmlReport/index.html",
-        ".playwright/package/lib/vite/recorder/assets/codeMirrorModule-5d0f417c.css",
-        ".playwright/package/lib/vite/recorder/assets/codeMirrorModule-85487eb6.js",
-        ".playwright/package/lib/vite/recorder/assets/codicon-79f233d0.ttf",
-        ".playwright/package/lib/vite/recorder/assets/index-64ce22d5.css",
-        ".playwright/package/lib/vite/recorder/assets/index-b14c63fe.js",
+        ".playwright/package/lib/vite/recorder/assets/codeMirrorModule-Hs9-1ZG4.css",
+        ".playwright/package/lib/vite/recorder/assets/codeMirrorModule-W69B4LBB.js",
+        ".playwright/package/lib/vite/recorder/assets/codicon-zGuYmc9o.ttf",
+        ".playwright/package/lib/vite/recorder/assets/index-Ly3PcVUb.js",
+        ".playwright/package/lib/vite/recorder/assets/index-ljsTwXtJ.css",
         ".playwright/package/lib/vite/recorder/index.html",
         ".playwright/package/lib/vite/recorder/playwright-logo.svg",
-        ".playwright/package/lib/vite/traceViewer/assets/codeMirrorModule-ef3e69be.js",
-        ".playwright/package/lib/vite/traceViewer/assets/wsPort-ae643a36.js",
-        ".playwright/package/lib/vite/traceViewer/assets/xtermModule-443332e6.js",
-        ".playwright/package/lib/vite/traceViewer/codeMirrorModule.5d0f417c.css",
-        ".playwright/package/lib/vite/traceViewer/codicon.79f233d0.ttf",
-        ".playwright/package/lib/vite/traceViewer/index.1a1fe659.css",
-        ".playwright/package/lib/vite/traceViewer/index.854eefeb.js",
+        ".playwright/package/lib/vite/traceViewer/assets/codeMirrorModule-0bpaqixv.js",
+        ".playwright/package/lib/vite/traceViewer/assets/wsPort-_JBDEilC.js",
+        ".playwright/package/lib/vite/traceViewer/assets/xtermModule-Yt6xwiJ_.js",
+        ".playwright/package/lib/vite/traceViewer/codeMirrorModule.Hs9-1ZG4.css",
+        ".playwright/package/lib/vite/traceViewer/codicon.zGuYmc9o.ttf",
+        ".playwright/package/lib/vite/traceViewer/index.-g_5lMbJ.css",
         ".playwright/package/lib/vite/traceViewer/index.html",
+        ".playwright/package/lib/vite/traceViewer/index.u51inEcm.js",
         ".playwright/package/lib/vite/traceViewer/playwright-logo.svg",
         ".playwright/package/lib/vite/traceViewer/snapshot.html",
         ".playwright/package/lib/vite/traceViewer/sw.bundle.js",
-        ".playwright/package/lib/vite/traceViewer/uiMode.8b41a49d.css",
-        ".playwright/package/lib/vite/traceViewer/uiMode.a0522537.js",
+        ".playwright/package/lib/vite/traceViewer/uiMode.Fb0bNA4H.js",
         ".playwright/package/lib/vite/traceViewer/uiMode.html",
-        ".playwright/package/lib/vite/traceViewer/wsPort.9c9a6767.css",
-        ".playwright/package/lib/vite/traceViewer/xtermModule.6428296b.css",
+        ".playwright/package/lib/vite/traceViewer/uiMode.pWy0Re7G.css",
+        ".playwright/package/lib/vite/traceViewer/wsPort.zR1WIy9-.css",
+        ".playwright/package/lib/vite/traceViewer/xtermModule.0lwXJFHT.css",
         ".playwright/package/lib/zipBundle.js",
         ".playwright/package/lib/zipBundleImpl.js",
         ".playwright/package/package.json",
@@ -950,8 +985,36 @@
         "icon.png",
         "lib/netstandard2.0/Microsoft.Playwright.dll",
         "lib/netstandard2.0/Microsoft.Playwright.xml",
-        "microsoft.playwright.1.41.0.nupkg.sha512",
+        "microsoft.playwright.1.42.0.nupkg.sha512",
         "microsoft.playwright.nuspec"
+      ]
+    },
+    "Microsoft.Playwright.NUnit/1.42.0": {
+      "sha512": "HSNUtJE//bcTj8QwX0H0W6DLJgJGSdcSqEP69x+fBfKCH2rM8bcmSwIgmoA9TVQzS2GS0oRqCcb1Qa8S13XJVA==",
+      "type": "package",
+      "path": "microsoft.playwright.nunit/1.42.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net462/Microsoft.Playwright.NUnit.dll",
+        "lib/netcoreapp3.1/Microsoft.Playwright.NUnit.dll",
+        "lib/netcoreapp3.1/Microsoft.Playwright.NUnit.runtimeconfig.json",
+        "microsoft.playwright.nunit.1.42.0.nupkg.sha512",
+        "microsoft.playwright.nunit.nuspec"
+      ]
+    },
+    "Microsoft.Playwright.TestAdapter/1.42.0": {
+      "sha512": "nuw3auFM0OCdtF+Dz8HBku93ilGnT+32VbEkg7youpjLolFPujHn4BIhb6F6P+qYXibvAY2PWlurO7VdSaQHVQ==",
+      "type": "package",
+      "path": "microsoft.playwright.testadapter/1.42.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Microsoft.Playwright.TestAdapter.dll",
+        "microsoft.playwright.testadapter.1.42.0.nupkg.sha512",
+        "microsoft.playwright.testadapter.nuspec"
       ]
     },
     "Microsoft.TestPlatform.ObjectModel/17.6.0": {
@@ -1169,10 +1232,10 @@
         "nuget.frameworks.nuspec"
       ]
     },
-    "NUnit/4.0.1": {
-      "sha512": "jNTHZ01hJsDNPDSBycoHpavFZUBf9vRVQLCyuo78LRrrFj6Ol/CeqK+NIeTk5d8Eycjk59KseWb7X5Ge6z7CgQ==",
+    "NUnit/4.1.0": {
+      "sha512": "MT/DpAhjtiytzhTgTqIhBuWx4y26PKfDepYUHUM+5uv4TsryHC2jwFo5e6NhWkApCm/G6kZ80dRjdJFuAxq3rg==",
       "type": "package",
-      "path": "nunit/4.0.1",
+      "path": "nunit/4.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1191,7 +1254,7 @@
         "lib/net6.0/nunit.framework.legacy.dll",
         "lib/net6.0/nunit.framework.legacy.xml",
         "lib/net6.0/nunit.framework.xml",
-        "nunit.4.0.1.nupkg.sha512",
+        "nunit.4.1.0.nupkg.sha512",
         "nunit.nuspec"
       ]
     },
@@ -1461,8 +1524,9 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.NET.Test.Sdk >= 17.6.0",
-      "Microsoft.Playwright >= 1.41.0",
-      "NUnit >= 4.0.1",
+      "Microsoft.Playwright >= 1.42.0",
+      "Microsoft.Playwright.NUnit >= 1.42.0",
+      "NUnit >= 4.1.0",
       "NUnit.Analyzers >= 3.6.1",
       "NUnit3TestAdapter >= 4.5.0",
       "coverlet.collector >= 6.0.0"
@@ -1513,11 +1577,15 @@
           },
           "Microsoft.Playwright": {
             "target": "Package",
-            "version": "[1.41.0, )"
+            "version": "[1.42.0, )"
+          },
+          "Microsoft.Playwright.NUnit": {
+            "target": "Package",
+            "version": "[1.42.0, )"
           },
           "NUnit": {
             "target": "Package",
-            "version": "[4.0.1, )"
+            "version": "[4.1.0, )"
           },
           "NUnit.Analyzers": {
             "target": "Package",

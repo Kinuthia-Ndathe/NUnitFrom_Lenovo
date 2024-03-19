@@ -9,8 +9,9 @@
       "PlaywrightDemo01/1.0.0": {
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "17.6.0",
-          "Microsoft.Playwright": "1.41.0",
-          "NUnit": "4.0.1",
+          "Microsoft.Playwright": "1.42.0",
+          "Microsoft.Playwright.NUnit": "1.42.0",
+          "NUnit": "4.1.0",
           "NUnit.Analyzers": "3.6.1",
           "NUnit3TestAdapter": "4.5.0",
           "coverlet.collector": "6.0.0"
@@ -42,7 +43,7 @@
           "Microsoft.TestPlatform.TestHost": "17.6.0"
         }
       },
-      "Microsoft.Playwright/1.41.0": {
+      "Microsoft.Playwright/1.42.0": {
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
           "System.ComponentModel.Annotations": "5.0.0",
@@ -50,8 +51,35 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Playwright.dll": {
-            "assemblyVersion": "1.41.0.0",
-            "fileVersion": "1.41.0.0"
+            "assemblyVersion": "1.42.0.0",
+            "fileVersion": "1.42.0.0"
+          }
+        }
+      },
+      "Microsoft.Playwright.NUnit/1.42.0": {
+        "dependencies": {
+          "Microsoft.NET.Test.Sdk": "17.6.0",
+          "Microsoft.Playwright": "1.42.0",
+          "Microsoft.Playwright.TestAdapter": "1.42.0",
+          "NUnit": "4.1.0",
+          "NUnit3TestAdapter": "4.5.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Playwright.NUnit.dll": {
+            "assemblyVersion": "1.42.0.0",
+            "fileVersion": "1.42.0.0"
+          }
+        }
+      },
+      "Microsoft.Playwright.TestAdapter/1.42.0": {
+        "dependencies": {
+          "Microsoft.Playwright": "1.42.0",
+          "Microsoft.TestPlatform.ObjectModel": "17.6.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Playwright.TestAdapter.dll": {
+            "assemblyVersion": "1.42.0.0",
+            "fileVersion": "1.42.0.0"
           }
         }
       },
@@ -318,7 +346,7 @@
           }
         }
       },
-      "NUnit/4.0.1": {
+      "NUnit/4.1.0": {
         "runtime": {
           "lib/net6.0/nunit.framework.dll": {
             "assemblyVersion": "4.0.1.0",
@@ -382,12 +410,26 @@
       "path": "microsoft.net.test.sdk/17.6.0",
       "hashPath": "microsoft.net.test.sdk.17.6.0.nupkg.sha512"
     },
-    "Microsoft.Playwright/1.41.0": {
+    "Microsoft.Playwright/1.42.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ez0fwsYAyAUZ9V64DOVLPQijRPibod/Ue6QHq0nqwqL633iVVRrpo+yGFIarMgD3p0q9ODqDr6jAQxNv9ld8Rw==",
-      "path": "microsoft.playwright/1.41.0",
-      "hashPath": "microsoft.playwright.1.41.0.nupkg.sha512"
+      "sha512": "sha512-vH4dIqJFDRB8+qsoy6vWJwemXwTMDo51aYoDTNrlz+mVqbfZaeEReVdHvwbtIBwm4iADpFQf0xWRoR2pHVKbWQ==",
+      "path": "microsoft.playwright/1.42.0",
+      "hashPath": "microsoft.playwright.1.42.0.nupkg.sha512"
+    },
+    "Microsoft.Playwright.NUnit/1.42.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HSNUtJE//bcTj8QwX0H0W6DLJgJGSdcSqEP69x+fBfKCH2rM8bcmSwIgmoA9TVQzS2GS0oRqCcb1Qa8S13XJVA==",
+      "path": "microsoft.playwright.nunit/1.42.0",
+      "hashPath": "microsoft.playwright.nunit.1.42.0.nupkg.sha512"
+    },
+    "Microsoft.Playwright.TestAdapter/1.42.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nuw3auFM0OCdtF+Dz8HBku93ilGnT+32VbEkg7youpjLolFPujHn4BIhb6F6P+qYXibvAY2PWlurO7VdSaQHVQ==",
+      "path": "microsoft.playwright.testadapter/1.42.0",
+      "hashPath": "microsoft.playwright.testadapter.1.42.0.nupkg.sha512"
     },
     "Microsoft.TestPlatform.ObjectModel/17.6.0": {
       "type": "package",
@@ -417,12 +459,12 @@
       "path": "nuget.frameworks/5.11.0",
       "hashPath": "nuget.frameworks.5.11.0.nupkg.sha512"
     },
-    "NUnit/4.0.1": {
+    "NUnit/4.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jNTHZ01hJsDNPDSBycoHpavFZUBf9vRVQLCyuo78LRrrFj6Ol/CeqK+NIeTk5d8Eycjk59KseWb7X5Ge6z7CgQ==",
-      "path": "nunit/4.0.1",
-      "hashPath": "nunit.4.0.1.nupkg.sha512"
+      "sha512": "sha512-MT/DpAhjtiytzhTgTqIhBuWx4y26PKfDepYUHUM+5uv4TsryHC2jwFo5e6NhWkApCm/G6kZ80dRjdJFuAxq3rg==",
+      "path": "nunit/4.1.0",
+      "hashPath": "nunit.4.1.0.nupkg.sha512"
     },
     "NUnit.Analyzers/3.6.1": {
       "type": "package",

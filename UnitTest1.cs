@@ -1,4 +1,6 @@
+/*
 using Microsoft.Playwright;
+using Microsoft.Playwright.NUnit;
 using NUnit.Framework;
 
 namespace PlaywrightDemo01;
@@ -31,10 +33,12 @@ public class Tests
             Path = "EAPP.jpg"
         });
 
+        //UI Interaction:
         await page.FillAsync(selector:"#Username", value:"admin");
         await page.FillAsync(selector:"#Password", value:"password");
         await page.ClickAsync(selector:"text=Log in");
         var isExist = await page.Locator(selector:"text='Employee Details'").IsVisibleAsync(); //the Locator method locates a certain item on the page and returns true if the value defined matches what is specified on this line.
-        Assert.
+        Assert.IsTrue(isExist);
     }
 }
+*/

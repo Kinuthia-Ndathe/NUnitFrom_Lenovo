@@ -46,7 +46,6 @@ const debugLoggerColorMap = {
   // green
   'server:metadata': 33 // blue
 };
-
 class DebugLogger {
   constructor() {
     this._debuggers = new Map();

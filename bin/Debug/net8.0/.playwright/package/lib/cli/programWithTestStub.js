@@ -1,5 +1,16 @@
-#!/usr/bin/env node
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "program", {
+  enumerable: true,
+  get: function () {
+    return _program.program;
+  }
+});
+var _utils = require("../utils");
+var _program = require("./program");
 /**
  * Copyright (c) Microsoft Corporation.
  *
@@ -17,11 +28,7 @@
  */
 
 /* eslint-disable no-console */
-"use strict";
 
-var _utils = require("../utils");
-var _program = _interopRequireDefault(require("./program"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function printPlaywrightTestError(command) {
   const packages = [];
   for (const pkg of ['playwright', 'playwright-chromium', 'playwright-firefox', 'playwright-webkit']) {
@@ -49,7 +56,7 @@ function printPlaywrightTestError(command) {
 const kExternalPlaywrightTestCommands = [['test', 'Run tests with Playwright Test.'], ['show-report', 'Show Playwright Test HTML report.'], ['merge-reports', 'Merge Playwright Test Blob reports']];
 function addExternalPlaywrightTestCommands() {
   for (const [command, description] of kExternalPlaywrightTestCommands) {
-    const playwrightTest = _program.default.command(command).allowUnknownOption(true);
+    const playwrightTest = _program.program.command(command).allowUnknownOption(true);
     playwrightTest.description(`${description} Available in @playwright/test package.`);
     playwrightTest.action(async () => {
       printPlaywrightTestError(command);
@@ -58,4 +65,3 @@ function addExternalPlaywrightTestCommands() {
   }
 }
 if (!process.env.PW_LANG_NAME) addExternalPlaywrightTestCommands();
-_program.default.parse(process.argv);
